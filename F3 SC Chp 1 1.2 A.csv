@@ -1,0 +1,33 @@
+﻿title,type,question,A,B,C,D,E,F,answer,image
+Eye,radio,"Protect eye ball.
+Melindungi bola mata.",Sclera / Sklera,Choroid / Koroid,Retina,Yellow spot / Bintik kuning,Optic nerve / Saraf optik,Blind spot / Bintik buta,A,
+,radio,"Prevent reflection of light / provide oxygen and nutrient.
+Mengelakkan pantulan cahaya. / Membekalkan oksigen dan nutrient.",Sclera / Sklera,Choroid / Koroid,Retina,Yellow spot / Bintik kuning,Optic nerve / Saraf optik,Blind spot / Bintik buta,B,
+,radio,"Sensitive to light and produce nerve impulse.
+Lapisan yang mempunyai fotoreseptor yang mengesan cahaya dan menghasilkan impuls saraf.",Sclera / Sklera,Choroid / Koroid,Retina,Yellow spot / Bintik kuning,Optic nerve / Saraf optik,Blind spot / Bintik buta,C,
+,radio,"Sensitive to light.
+Peka/sensitif terhadap cahaya.",Sclera / Sklera,Choroid / Koroid,Retina,Yellow spot / Bintik kuning,Optic nerve / Saraf optik,Blind spot / Bintik buta,D,
+,radio,"Transfer nerve impulse from retina to brain.
+Menghantar impuls saraf dari retina ke otak.",Sclera / Sklera,Choroid / Koroid,Retina,Yellow spot / Bintik kuning,Optic nerve / Saraf optik,Blind spot / Bintik buta,E,
+,radio,"No image is formed. 
+Titik ini tiada fotoreseptor dan tiada imej terbentuk.",Sclera / Sklera,Choroid / Koroid,Retina,Yellow spot / Bintik kuning,Optic nerve / Saraf optik,Blind spot / Bintik buta,F,
+,radio,"Biconvex, transparent dan elastic to focus light on retina by refraction of light. 
+Kanta cembung lut sinar dan kenyal yang menfokuskan cahaya ke atas retina melalui pembiasan cahaya.",Lens / Kanta,Ciliary muscle / Otot silia,Suspensory ligament / Ligamen penggantung,Cornea / Kornea,Iris,Pupil,A,
+,radio,"Control the thickness of lens. 
+Mengawal ketebalan kanta mata.",Lens / Kanta,Ciliary muscle / Otot silia,Suspensory ligament / Ligamen penggantung,Cornea / Kornea,Iris,Pupil,B,
+,radio,"Hold the Lens. 
+Memegang kanta mata.",Lens / Kanta,Ciliary muscle / Otot silia,Suspensory ligament / Ligamen penggantung,Cornea / Kornea,Iris,Pupil,C,
+,radio,"Refract and focus light on retina. 
+Membias dan memfokuskan cahaya ke atas retina.",Lens / Kanta,Ciliary muscle / Otot silia,Suspensory ligament / Ligamen penggantung,Cornea / Kornea,Iris,Pupil,D,
+,radio,"Control the size of pupil. 
+Mengawal saiz anak mata.",Lens / Kanta,Ciliary muscle / Otot silia,Suspensory ligament / Ligamen penggantung,Cornea / Kornea,Iris,Pupil,E,
+,radio,"Control the amount of light to enter the eye. 
+Mengawal kuantiti cahaya yang masuk ke dalam mata.",Lens / Kanta,Ciliary muscle / Otot silia,Suspensory ligament / Ligamen penggantung,Cornea / Kornea,Iris,Pupil,F,
+,radio,"Transparent fluid which maintains the shape of the eyeball and focuses light into the eye.
+Bendalir lut sinar yang mengekalkan bentuk bola mata dan memfokuskan cahaya ke dalam mata.",Aqueous humour / Gelemair,Conjunctiva / Konjuktiva,Vitreous humour / Gelemaca,,,,A,
+,radio,"Protect cornea/sclera.
+Melindungi kornea/sklera.",Aqueous humour / Gelemair,Conjunctiva / Konjuktiva,Vitreous humour / Gelemaca,,,,B,
+,radio,"Transparent jelly-like substance which maintains the shape of the eyeball and focuses light onto the retina.
+Bahan jeli lut sinar yang mengekalkan bentuk bola mata dan memfokuskan cahaya ke retina.",Aqueous humour / Gelemair,Conjunctiva / Konjuktiva,Vitreous humour / Gelemaca,,,,C,
+,radio,sensitive to the colours of light / peka kepada warna cahaya,Rod Cell / Sel rod,Cone Cell / Sel Kon,,,,,B,
+,radio,sensitive to different light intensities / peka kepada keamatan cahaya,Rod Cell / Sel rod,Cone Cell / Sel Kon,,,,,A,

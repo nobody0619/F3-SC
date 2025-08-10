@@ -1,0 +1,13 @@
+﻿title,type,question,A,B,C,D,E,F,answer,image
+Plant,checkbox,植物早上吸收,Oxygen / Oksigen,Carbon dioxide / Karbon dioksida,Nitrogen,Carbon monoxide / Karbon monoksida,,,"A,B",
+,checkbox,植物早上释放,Oxygen / Oksigen,Carbon dioxide / Karbon dioksida,Nitrogen,Carbon monoxide / Karbon monoksida,,,"A,B",
+,radio,植物晚上释放,Oxygen / Oksigen,Carbon dioxide / Karbon dioksida,Nitrogen,Carbon monoxide / Karbon monoksida,,,B,
+,radio,植物晚上吸收,Oxygen / Oksigen,Carbon dioxide / Karbon dioksida,Nitrogen,Carbon monoxide / Karbon monoksida,,,A,
+,text,diffusion of carbon dioxide occurs through the / Peresapan karbon dioksida berlaku melalui,,,,,,,stoma,
+,text,Stoma 的开关是由谁控制的？,,,,,,,"guard cell,sel pengawal",
+,radio,Stoma when there is light / Stoma apabila terdapat cahaya,open / terbuka,close / tertutup,,,,,A,
+,radio,Stoma when it get dark / Stoma apabila keadaan menjadi gelap,open / terbuka,close / tertutup,,,,,B,
+,radio,Stoma when the plant loses a lot of water on a hot day / Semasa tumbuhan kehilangan air yang banyak pada hari panas,open / terbuka,close / tertutup,,,,,B,
+,radio,Photosynthesis cause guard cell become / Fotosintesis menyebabkan sel pengawal menjadi,turgid and curved / segah dan membengkok,flaccid and straight / flasid dan lurus,turgid and straight / segah dan lurus,flaccid and curved / flasid dan membengkok,,,A,
+,radio,"At night, guard cell become / Pada waktu malam, sel pengawal menjadi",turgid and curved / segah dan membengkok,flaccid and straight / flasid dan lurus,turgid and straight / segah dan lurus,flaccid and curved / flasid dan membengkok,,,B,
+,radio,"At hot day, guard cell become / Pada hari panas, sel pengawal menjadi",turgid and curved / segah dan membengkok,flaccid and straight / flasid dan lurus,turgid and straight / segah dan lurus,flaccid and curved / flasid dan membengkok,,,B,

@@ -1,0 +1,11 @@
+﻿title,type,question,A,B,C,D,E,F,G,H,I,J,K,L,M,N,answer,image
+Health of Human Respiratory System,text,Carbon monoxide + haemoglobin / Karbon monoksida + hemoglobin,,,,,,,,,,,,,,,"carboxyhaemoglobin,karboksihemoglobin",
+,checkbox,harmful substance to respiratory system / bahan berbahaya kepada sistem (7个) pernafasan,Cigarette tar / Tar rokok,Carbon monoxide / Karbon monoksida,Sulphur dioxide / Sulfur dioksida,Nitrogen dioxide / Nitrogen dioksida,Haze / Jerebu,Dust / Debu,Pollen / Debunga,Oxygen / Oksigen,Water vapor / Wap air,Helium / Helium,Argon / Argon,Neon / Neon,Methane / Metana,Hydrogen / Hidrogen,"A,B,C,D,E,F,G",
+,radio,Cause lung become black / Menyebabkan peparu menjadi hitam,Cigarette tar / Tar rokok,Carbon monoxide / Karbon monoksida,Nicotine / Nikotin,Carcinogen / Karsinogen,,,,,,,,,,,A,
+,checkbox,Cause lung cancer / Menyebabkan kanser peparu,Cigarette tar / Tar rokok,Carbon monoxide / Karbon monoksida,Nicotine / Nikotin,Carcinogen / Karsinogen,,,,,,,,,,,"A,D",
+,radio,Cause addiction / Menyebabkan ketagihan,Cigarette tar / Tar rokok,Carbon monoxide / Karbon monoksida,Nicotine / Nikotin,Carcinogen / Karsinogen,,,,,,,,,,,C,
+,radio,Cause less oxygen transported / Menyebabkan kurang oksigen yang diangkut,Cigarette tar / Tar rokok,Carbon monoxide / Karbon monoksida,Nicotine / Nikotin,Carcinogen / Karsinogen,,,,,,,,,,,B,
+,radio,这是什么病？,Asthma / Asma,Bronchitis / Bronkitis,Emphysema / Emfisema,Lung Cancer / Kanser Peparu,,,,,,,,,,,C,emphysema.png
+,radio,这是什么病？,Asthma / Asma,Bronchitis / Bronkitis,Emphysema / Emfisema,Lung Cancer / Kanser Peparu,,,,,,,,,,,D,lung_cancer.png
+,radio,Smoking cause cotton wool turn / Merokok menyebabkan kapas menjadi,brown / perang,red / merah,blue/ biru,,,,,,,,,,,,A,
+,radio,Smoking cause litmus solution turn / Merokok menyebabkan larutan litmus menjadi,brown / perang,red / merah,blue/ biru,,,,,,,,,,,,B,

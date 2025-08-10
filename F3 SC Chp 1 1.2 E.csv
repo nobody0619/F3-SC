@@ -1,0 +1,7 @@
+﻿title,type,question,A,B,C,D,E,F,answer,image
+Skin,radio,A is / ialah,Pain receptor / Reseptor sakit,Heat receptor / Reseptor haba,Cold receptor / Reseptor sejuk,Pressure receptor / Reseptor tekanan,Touch receptor / Reseptor sentuh,,C,skin.png
+,radio,B is / ialah,Pain receptor / Reseptor sakit,Heat receptor / Reseptor haba,Cold receptor / Reseptor sejuk,Pressure receptor / Reseptor tekanan,Touch receptor / Reseptor sentuh,,A,skin.png
+,radio,C is / ialah,Pain receptor / Reseptor sakit,Heat receptor / Reseptor haba,Cold receptor / Reseptor sejuk,Pressure receptor / Reseptor tekanan,Touch receptor / Reseptor sentuh,,B,skin.png
+,radio,D is / ialah,Pain receptor / Reseptor sakit,Heat receptor / Reseptor haba,Cold receptor / Reseptor sejuk,Pressure receptor / Reseptor tekanan,Touch receptor / Reseptor sentuh,,E,skin.png
+,radio,E is / ialah,Pain receptor / Reseptor sakit,Heat receptor / Reseptor haba,Cold receptor / Reseptor sejuk,Pressure receptor / Reseptor tekanan,Touch receptor / Reseptor sentuh,,D,skin.png
+,checkbox,Sensitivity of skin is depents on / Sensitiviti kulit adalah bergantung kepada,Number of receptor / Bilangan reseptor,Number of effector / Bilangan efektor,Number of affector / Bilangan afektor,Thickness of epidermis / Ketebalan epidermis,Thickness of dermis / Ketebalan dermis,Thickness of fat layer / Ketebalan lapisan lemak,"A,D",
