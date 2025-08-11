@@ -1,0 +1,13 @@
+﻿title,type,question,A,B,C,D,answer,image
+Type of blood vessel,radio,Thick and muscular wall / Dinding yang tebal,Artery / Arteri,Vein / Vena,Capillary / Kapilari,,A,
+,radio,"Thin, less muscular and less elastic wall / Dinding yang nipis, sedikit berotot dan elastik",Artery / Arteri,Vein / Vena,Capillary / Kapilari,,B,
+,radio,Thinnest wall which is one cell thick / Dinding paling nipis setebal satu sel,Artery / Arteri,Vein / Vena,Capillary / Kapilari,,C,
+,checkbox,No valves / Tiada injap,Artery / Arteri,Vein / Vena,Capillary / Kapilari,,"A,C",
+,radio,Small lumen / Saiz lumen kecil,Artery / Arteri,Vein / Vena,Capillary / Kapilari,,A,
+,radio,Has valves / Mempunyai injap,Artery / Arteri,Vein / Vena,Capillary / Kapilari,,B,
+,radio,Large lumen / Saiz lumen besar,Artery / Arteri,Vein / Vena,Capillary / Kapilari,,B,
+,radio,Transports deoxygenated blood back to the heart / Mengangkut darah terdeoksigen balik semula ke jantung,Artery / Arteri,Vein / Vena,Capillary / Kapilari,,B,
+,radio,"Allows the exchange of gases, food and waste products / Membenarkan pertukaran gas, makanan dan bahan kumuh",Artery / Arteri,Vein / Vena,Capillary / Kapilari,,C,
+,radio,Transports oxygenated blood from the heart / Mengangkut darah beroksigen keluar dari jantung,Artery / Arteri,Vein / Vena,Capillary / Kapilari,,A,
+,checkbox,Slow blood flow / Pengaliran darah yang perlahan,Artery / Arteri,Vein / Vena,Capillary / Kapilari,,"B,C",
+,radio,Rapid blood flow under high blood pressure / Pengaliran darah yang cepat pada tekanan darah yang tinggi,Artery / Arteri,Vein / Vena,Capillary / Kapilari,,A,

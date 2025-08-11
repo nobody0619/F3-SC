@@ -1,0 +1,15 @@
+﻿title,type,question,A,B,C,D,E,F,G,H,answer,image
+Rate of Transpiration and Vascular Bundles,radio,a process of water loss in the form of water vapour through stoma / suatu proses kehilangan air dalam bentuk wap air melalui stoma,Transpiration / Transpirasi,Evaporation / Penyejatan,Respiration / Respirasi,Photosynthesis / Fotosintesis,Guttation / Gutasi,,,,A,
+,radio,the water loss from plants in liquid form through hydathodes that are always open at the edges of the leaves / kehilangan air daripada tumbuhan dalam bentuk cecair melalui hidatod yang sentiasa terbuka pada pinggir daun,Transpiration / Transpirasi,Evaporation / Penyejatan,Respiration / Respirasi,Photosynthesis / Fotosintesis,Guttation / Gutasi,,,,E,
+,checkbox,会影响到 Rate of Transpiration / Kadar Transpirasi 的是,Temperature / Suhu,Light intensity / Keamatan cahaya,Air humidity / Kelembapan udara,Movement of air / Pergerakan udara,Soil pH / pH tanah,Chlorophyll content / Kandungan klorofil,Root length / Panjang akar,Atmospheric pressure / Tekanan atmosfera,"A,B,C,D",
+,radio,Increase in air movement __________ the rate of transpiration / Peningkatan pergerakan udara _____________ kadar transpirasi,increase / meningkatkan,decrease / menurunkan,,,,,,,A,
+,radio,Increase in air humidity _______________ the rate of transpiration / Peningkatan kelembapan udara _______________ kadar transpirasi,increase / meningkatkan,decrease / menurunkan,,,,,,,B,
+,radio,Increase in temperature ______________ the rate of transpiration / Peningkatan suhu _______________ kadar transpirasi,increase / meningkatkan,decrease / menurunkan,,,,,,,A,
+,radio,A 是 ,xylem / xilem,phloem / floem,,,,,,,A,vascular_1.jpg
+,radio,B 是 ,xylem / xilem,phloem / floem,,,,,,,B,vascular_1.jpg
+,radio,A 是 ,xylem / xilem,phloem / floem,,,,,,,B,vascular_2.jpg
+,radio,B 是 ,xylem / xilem,phloem / floem,,,,,,,A,vascular_2.jpg
+,radio,A 是 ,xylem / xilem,phloem / floem,,,,,,,A,vascular_3.jpg
+,radio,B 是 ,xylem / xilem,phloem / floem,,,,,,,B,vascular_3.jpg
+,radio,transports water and dissolved mineral salts / mengangkut air dan garam mineral terlarut,xylem / xilem,phloem / floem,,,,,,,A,
+,radio,transport sucrose / mengangkut sukrosa,xylem / xilem,phloem / floem,,,,,,,B,

@@ -1,0 +1,15 @@
+﻿title,type,question,A,B,C,D,E,F,G,H,I,answer,image
+Natural compounds and Calcium carbonate,checkbox,Hematite / Hematit,Iron / Ferum,Tin / Stanum,Silicon / Silikon,Aluminium,Lead / Plumbum,Calcium / Kalsium,Carbon / Karbon,Oxygen / Oksigen,Sulphur / Sulfur,"A,H",
+,checkbox,Cassiterite / Kasiterit,Iron / Ferum,Tin / Stanum,Silicon / Silikon,Aluminium,Lead / Plumbum,Calcium / Kalsium,Carbon / Karbon,Oxygen / Oksigen,Sulphur / Sulfur,"B,H",
+,checkbox,Quartz / Kuarza,Iron / Ferum,Tin / Stanum,Silicon / Silikon,Aluminium,Lead / Plumbum,Calcium / Kalsium,Carbon / Karbon,Oxygen / Oksigen,Sulphur / Sulfur,"C,H",
+,checkbox,Bauxite / Bauksit,Iron / Ferum,Tin / Stanum,Silicon / Silikon,Aluminium,Lead / Plumbum,Calcium / Kalsium,Carbon / Karbon,Oxygen / Oksigen,Sulphur / Sulfur,"D,H",
+,checkbox,Galena,Iron / Ferum,Tin / Stanum,Silicon / Silikon,Aluminium,Lead / Plumbum,Calcium / Kalsium,Carbon / Karbon,Oxygen / Oksigen,Sulphur / Sulfur,"E,I",
+,checkbox,Pyrite / Pirit,Iron / Ferum,Tin / Stanum,Silicon / Silikon,Aluminium,Lead / Plumbum,Calcium / Kalsium,Carbon / Karbon,Oxygen / Oksigen,Sulphur / Sulfur,"A,I",
+,checkbox,Calcite / Kalsit,Iron / Ferum,Tin / Stanum,Silicon / Silikon,Aluminium,Lead / Plumbum,Calcium / Kalsium,Carbon / Karbon,Oxygen / Oksigen,Sulphur / Sulfur,"F,G,H",
+,checkbox,Limestone / Batu kapur,Iron / Ferum,Tin / Stanum,Silicon / Silikon,Aluminium,Lead / Plumbum,Calcium / Kalsium,Carbon / Karbon,Oxygen / Oksigen,Sulphur / Sulfur,"F,G,H",
+,checkbox,"Calcium carbonate + hydrochloric acid → 
+
+Kalsium karbonat + asid hidroklorik → ",Calcium oxide / Kalsium oksida,Calcium hydroxide / Kalsium hidroksida,Calcium / Kalsium,Carbon dioxide / Karbon dioksida,Carbon monoxide / Karbon monoksida,Calcium chloride / Kalsium klorida,Water / Air,,,"D,F,G",
+,checkbox,"Calcium carbonate → 
+
+Kalsium karbonat → ",Calcium oxide / Kalsium oksida,Calcium hydroxide / Kalsium hidroksida,Calcium / Kalsium,Carbon dioxide / Karbon dioksida,Carbon monoxide / Karbon monoksida,Calcium chloride / Kalsium klorida,Water / Air,,,"A,D",

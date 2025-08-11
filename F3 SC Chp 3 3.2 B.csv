@@ -1,0 +1,13 @@
+﻿title,type,question,A,B,C,D,answer,image
+Heart,text,a,,,,,"right atrium,atrium kanan",heart.png
+,text,b,,,,,"left atrium,atrium kiri",heart.png
+,text,c,,,,,"right ventricle,ventrikel kanan",heart.png
+,text,d,,,,,"left ventricle,ventrikel kiri",heart.png
+,text,e,,,,,"vena cava,vena kava",heart.png
+,text,f,,,,,"pulmonary artery,arteri pulmonari",heart.png
+,text,h,,,,,"pulmonary vein,vena pulmonari",heart.png
+,text,g,,,,,aorta,heart.png
+,text,i,,,,,"tricuspid valve,injap trikuspid",heart.png
+,text,j,,,,,"semilunar valve,injap sabit",heart.png
+,text,k,,,,,"bicuspid valve,injap bikuspid",heart.png
+,text,L,,,,,septum,heart.png
