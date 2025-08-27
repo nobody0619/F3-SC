@@ -1,0 +1,37 @@
+﻿title,type,question,A,B,C,D,E,F,G,H,answer,image
+,radio,"Build the geocentric model / 
+Membina model geosentrik",Ptolemy,Copernicus,Kepler,Kee He Xun,Yuri Gagarin,Neil Armstrong,Galileo Galilei,David Copperfield,A,
+,radio,"Build the heliocentric model / 
+Membina model heliosentrik",Ptolemy,Copernicus,Kepler,Kee He Xun,Yuri Gagarin,Neil Armstrong,Galileo Galilei,David Copperfield,B,
+,radio,"Modified the heliocentric model / 
+Mengubah suai model heliosentrik",Ptolemy,Copernicus,Kepler,Kee He Xun,Yuri Gagarin,Neil Armstrong,Galileo Galilei,David Copperfield,C,
+,radio,第一个绕着地球转的宇航员,Ptolemy,Copernicus,Kepler,Kee He Xun,Yuri Gagarin,Neil Armstrong,Galileo Galilei,David Copperfield,E,
+,radio,第一个上月球的宇航员,Ptolemy,Copernicus,Kepler,Kee He Xun,Yuri Gagarin,Neil Armstrong,Galileo Galilei,David Copperfield,F,
+,radio,第一个发明航天望远镜的人,Ptolemy,Copernicus,Kepler,Kee He Xun,Yuri Gagarin,Neil Armstrong,Galileo Galilei,David Copperfield,G,
+,checkbox,哪些是马来西亚的卫星?,MEASAT 1,MEASAT 2,TiungSAT-1,Hubble Space Telescope / Teleskop Angkasa Hubble,Sputnik 1 / Sputnik 1,INSAT / INSAT,,,"A,B,C",
+,radio,"To measure the altitude of stars / 
+Untuk mengukur altitud bintang",Sextant / Sekstan,Galileo’s Telescope / Teleskop Galileo,Hubble space telescope / Teleskop angkasa Hubble,Radio telescopes / Teleskop radio,Spitzer space telescope / Teleskop angkasa Spitzer,,,,A,
+,radio,"Which telescope did Galileo use to observe Jupiter’s moons? / 
+Teleskop manakah digunakan Galileo untuk memerhati bulan Musytari?  ",Sextant / Sekstan,Galileo’s Telescope / Teleskop Galileo,Hubble space telescope / Teleskop angkasa Hubble,Radio telescopes / Teleskop radio,Spitzer space telescope / Teleskop angkasa Spitzer,,,,B,
+,radio,"Which telescope launched in 1990 gave deep space images? / 
+Teleskop manakah dilancarkan pada 1990 memberi imej angkasa lepas?  ",Sextant / Sekstan,Galileo’s Telescope / Teleskop Galileo,Hubble space telescope / Teleskop angkasa Hubble,Radio telescopes / Teleskop radio,Spitzer space telescope / Teleskop angkasa Spitzer,,,,C,
+,radio,"Which telescope detects radio waves from space objects? / 
+Teleskop manakah mengesan gelombang radio dari objek angkasa?  ",Sextant / Sekstan,Galileo’s Telescope / Teleskop Galileo,Hubble space telescope / Teleskop angkasa Hubble,Radio telescopes / Teleskop radio,Spitzer space telescope / Teleskop angkasa Spitzer,,,,D,
+,radio,"Which telescope launched in 2003 observes in infrared and detects very distant activities in space? / 
+Teleskop manakah dilancarkan pada 2003 memerhati dalam inframerah dan mengesan aktiviti dalam angkasa lepas yang sangat jauh?  ",Sextant / Sekstan,Galileo’s Telescope / Teleskop Galileo,Hubble space telescope / Teleskop angkasa Hubble,Radio telescopes / Teleskop radio,Spitzer space telescope / Teleskop angkasa Spitzer,,,,E,
+,radio,"Which artificial object orbits the Earth or other planets to collect data or send signals? / 
+Objek buatan manakah mengorbit Bumi atau planet lain untuk mengumpul data atau menghantar isyarat?  ",Satellite / Satelit,Space Probe / Kuar Angkasa,Remote Sensing / Penderiaan Jauh,Rocket / Roket,,,,,A,
+,radio,"Which vehicle is used to launch satellites and astronauts into space? / 
+Kenderaan manakah digunakan untuk melancarkan satelit dan angkasawan ke angkasa lepas?",Satellite / Satelit,Space Probe / Kuar Angkasa,Remote Sensing / Penderiaan Jauh,Rocket / Roket,,,,,D,
+,radio,"A spacecraft that gathers information and sends it back to Earth / 
+Kapal angkasa yang mengumpulkan maklumat dan menghantarnya kembali ke Bumi",Satellite / Satelit,Space Probe / Kuar Angkasa,Remote Sensing / Penderiaan Jauh,Rocket / Roket,,,,,B,
+,radio,"A method of gathering and recording information from a distance / 
+Kaedah mengumpul dan merekodkan maklumat dari jarak jauh",Satellite / Satelit,Space Probe / Kuar Angkasa,Remote Sensing / Penderiaan Jauh,Rocket / Roket,,,,,C,
+,radio,"To detect suitable regions for agricultural development / 
+Untuk mengesan kawasan pembangunan pertanian yang bersesuaian",Agriculture / Pertanian,Geology / Geologi,Disaster management / Pengurusan bencana,Defence / Pertahanan,,,,,A,
+,radio,"To detect locations such as mineral sources, mass depletion and land depletion / 
+Untuk mengesan lokasi seperti sumber mineral, susutan jisim dan susutan darat",Agriculture / Pertanian,Geology / Geologi,Disaster management / Pengurusan bencana,Defence / Pertahanan,,,,,B,
+,radio,"To identify pollution and forest fires / 
+Untuk mengenal pasti pencemaran dan pembakaran hutan",Agriculture / Pertanian,Geology / Geologi,Disaster management / Pengurusan bencana,Defence / Pertahanan,,,,,C,
+,radio,"To detect intrusions of enemy ships, aircraft and vehicles / 
+Untuk mengesan pencerobohan kapal, pesawat udara dan kenderaan musuh",Agriculture / Pertanian,Geology / Geologi,Disaster management / Pengurusan bencana,Defence / Pertahanan,,,,,D,
