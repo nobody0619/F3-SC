@@ -2,7 +2,7 @@
 Human Respiratory System,radio,"When you inhale, intercostal muscles / Apabila anda menarik nafas, otot interkostal",contract / mengecut,relax / mengendur,,,,,A,
 ,radio,"When you exhale, intercostal muscles / Apabila anda menghembus nafas, otot interkostal",contract / mengecut,relax / mengendur,,,,,B,
 ,checkbox,"When you inhale, diaphragm muscles / Apabila anda menarik nafas, otot diafragma",contract / mengecut,relax / mengendur,become flat / meleper,curve upwards / melengkung ke atas,,,"A,C",
-,radio,"When you exhale, diaphragm muscles / Apabila anda  menghembus nafas, otot diafragma",contract / mengecut,relax / mengendur,become flat / meleper,curve upwards / melengkung ke atas,,,"B,D",
+,checkbox,"When you exhale, diaphragm muscles / Apabila anda  menghembus nafas, otot diafragma",contract / mengecut,relax / mengendur,become flat / meleper,curve upwards / melengkung ke atas,,,"B,D",
 ,radio,"When you exhale, thoracic cavity / Apabila anda menghembus nafas, rongga toraks",smaller / mengecil,bigger / lebih besar,,,,,A,
 ,radio,"When you inhale, thoracic cavity / Apabila anda menarik  nafas, rongga toraks",smaller / mengecil,bigger / lebih besar,,,,,B,
 ,radio,"When you inhale, air pressure in the thoracic cavity / Apabila anda menarik nafas, tekanan udara di dalam rongga toraks",increase / bertambah,decrease / berkurang,,,,,B,
