@@ -16,7 +16,7 @@
 ,checkbox,B 型血能捐给谁？,A,B,AB,O,"B,C",
 ,checkbox,O 型血能捐给谁？,A,B,AB,O,"A,B,C,D",
 ,radio,AB 型血能捐给谁？,A,B,AB,O,C,
-,radio,AB 型血能收谁的血？,A,B,AB,O,"A,B,C,D",
+,checkbox,AB 型血能收谁的血？,A,B,AB,O,"A,B,C,D",
 ,radio,O 型血能收谁的血？,A,B,AB,O,D,
 ,checkbox,A 型血能收谁的血？,A,B,AB,O,"A,D",
 ,checkbox,B 型血能收谁的血？,A,B,AB,O,"B,D",
