@@ -14,4 +14,8 @@ Human Nervous System,checkbox,Central Nervous System / Sistem Saraf Pusat 有什
 ,radio,Dancing / Menari 由谁控制,Brain / Otak,Spinal Cord / Saraf Tunjang,Medulla Oblongata / Medula Oblongata,,,,A,
 ,radio,Reading / Membaca 由谁控制,Brain / Otak,Spinal Cord / Saraf Tunjang,Medulla Oblongata / Medula Oblongata,,,,A,
 ,radio,Writing / Menulis 由谁控制,Brain / Otak,Spinal Cord / Saraf Tunjang,Medulla Oblongata / Medula Oblongata,,,,A,
-,checkbox,Stimulus / Rangsangan  →  A → Brain → B → Response / Gerak balas,A: Receptor / Reseptor,A: Affector / Afektor,A: Effector / Efektor,B: Receptor / Reseptor,B: Affector / Afektor,B: Effector / Efektor,"A,B,F",
+,radio,"Stimulus / Rangsangan  →  A → Brain → B → Response / Gerak balas
+A 是?",A: Receptor / Reseptor,A: Affector / Afektor,A: Effector / Efektor,,,,"A,B",
+,radio,"Stimulus / Rangsangan  →  A → Brain → B → Response / Gerak balas
+B是?",B: Receptor / Reseptor,B: Affector / Afektor,B: Effector / Efektor,,,,F,
+,text,控制 involuntary action / tindak balas luar kawal 的脑干的 英文/马来文 是,,,,,,,"medulla oblongata,medula oblongata",
