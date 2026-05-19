@@ -170,7 +170,7 @@
     <div class="footer-help">
       有问题可直接 WhatsApp 老师：<a href="https://wa.me/60167312519" target="_blank" rel="noopener">016-7312519</a>
     </div>
-    <div class="version-tag" id="versionTag">版本：2026.05.05.10</div>
+    <div class="version-tag" id="versionTag">版本：2026.05.05.11</div>
   </div>
 </div>
 
@@ -201,7 +201,7 @@
       <div class="xp-text" id="statExp">⚡0 / 100</div>
     </div>
     <div id="levelUpMsg" class="levelup"></div>
-    <div class="version-tag">版本：2026.05.05.10</div>
+    <div class="version-tag">版本：2026.05.05.11</div>
   </div>
   <div id="chapterWrap"></div>
 </div>
@@ -312,7 +312,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const SCRIPT_URL = document.getElementById('postForm').getAttribute('action');
   const STORAGE_KEY = 'kee_quiz_game_auth_v1';
   const TZ = 'Asia/Kuala_Lumpur';
-  const APP_VERSION = '2026.05.05.10';
+  const APP_VERSION = '2026.05.05.11';
   let serverBaseMs = 0;
   let perfBaseMs = 0;
   let deferredInstallPrompt = null;
@@ -1194,41 +1194,32 @@ document.addEventListener('DOMContentLoaded', () => {
       expGained: currentExpGain
     };
 
-    document.getElementById('submit-status').textContent = '正在提交成绩，请稍等...';
+    document.getElementById('submit-status').textContent = '正在提交成绩...';
     setLoading(true, '正在提交成绩，请不要关闭页面...');
 
     try {
-      // 先用 JSONP 确认写入，成功会拿到 sheet 与行号。
-      const res = await jsonpApi(payload, 8000);
-      if (res && res.ok) {
-        const extra = res.sheetName ? `（${res.sheetName} 第${res.row || '-'}行）` : '';
-        document.getElementById('submit-status').textContent = '✅ 成绩已提交 ' + extra;
-        return;
-      }
-      throw new Error((res && res.error) || 'submit failed');
+      const form = document.getElementById('postForm');
+      form.action.value = 'submitScoreFast';
+      if (form.submitId) form.submitId.value = payload.submitId;
+      form.book.value = payload.book;
+      form.quizId.value = payload.quizId;
+      form.name.value = payload.name;
+      form.score.value = payload.score;
+      form.correct.value = payload.correct;
+      form.wrong.value = payload.wrong;
+      form.time.value = payload.time;
+      form.mode.value = payload.mode;
+      form.expGained.value = payload.expGained;
+
+      // 最快：直接POST，不等Apps Script回应。跟旧版一样快。
+      form.submit();
+
+      await new Promise(resolve => setTimeout(resolve, 350));
+      document.getElementById('submit-status').textContent = '✅ 成绩已送出';
     } catch(e) {
-      console.warn('confirm submit failed, send by form fallback', e);
-      try {
-        const form = document.getElementById('postForm');
-        form.action.value = 'submitScoreFast';
-        if (form.submitId) form.submitId.value = payload.submitId;
-        form.book.value = payload.book;
-        form.quizId.value = payload.quizId;
-        form.name.value = payload.name;
-        form.score.value = payload.score;
-        form.correct.value = payload.correct;
-        form.wrong.value = payload.wrong;
-        form.time.value = payload.time;
-        form.mode.value = payload.mode;
-        form.expGained.value = payload.expGained;
-        form.submit();
-        await new Promise(resolve => setTimeout(resolve, 700));
-        document.getElementById('submit-status').textContent = '✅ 成绩已送出（若没看到，请等几秒刷新Sheet）';
-      } catch(err) {
-        console.error(err);
-        savePendingScore(payload);
-        document.getElementById('submit-status').innerHTML = '⚠️ 成绩提交失败，已暂存在本机。请点“补交成绩”或截图给老师。 <button class="btn small secondary" onclick="window.retryPendingScores && window.retryPendingScores()">补交成绩</button>';
-      }
+      console.error(e);
+      savePendingScore(payload);
+      document.getElementById('submit-status').innerHTML = '⚠️ 成绩提交失败，已暂存在本机。请点“补交成绩”或截图给老师。 <button class="btn small secondary" onclick="window.retryPendingScores && window.retryPendingScores()">补交成绩</button>';
     } finally {
       setLoading(false);
     }
