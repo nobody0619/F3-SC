@@ -156,6 +156,7 @@
       <button id="startBtn" class="btn" type="button">进入 / Start</button>
       <button id="rulesBtn" class="btn ghost" type="button">📜 游戏规则</button>
       <button id="refreshBtn" class="btn ghost" type="button">🔄 更新页面</button>
+      <button id="installBtn" class="btn ghost" type="button">📲 加入手机首页</button>
     </div>
     <div class="theme-panel" id="themePanelLogin">
       <button class="theme-dot" data-theme="soft">白色</button>
@@ -169,7 +170,7 @@
     <div class="footer-help">
       有问题可直接 WhatsApp 老师：<a href="https://wa.me/60167312519" target="_blank" rel="noopener">016-7312519</a>
     </div>
-    <div class="version-tag" id="versionTag">版本：2026.05.05.7</div>
+    <div class="version-tag" id="versionTag">版本：2026.05.05.8</div>
   </div>
 </div>
 
@@ -200,7 +201,7 @@
       <div class="xp-text" id="statExp">⚡0 / 100</div>
     </div>
     <div id="levelUpMsg" class="levelup"></div>
-    <div class="version-tag">版本：2026.05.05.7</div>
+    <div class="version-tag">版本：2026.05.05.8</div>
   </div>
   <div id="chapterWrap"></div>
 </div>
@@ -310,9 +311,10 @@ document.addEventListener('DOMContentLoaded', () => {
   const SCRIPT_URL = document.getElementById('postForm').getAttribute('action');
   const STORAGE_KEY = 'kee_quiz_game_auth_v1';
   const TZ = 'Asia/Kuala_Lumpur';
-  const APP_VERSION = '2026.05.05.7';
+  const APP_VERSION = '2026.05.05.8';
   let serverBaseMs = 0;
   let perfBaseMs = 0;
+  let deferredInstallPrompt = null;
 
   let user = '';
   let displayUser = '';
@@ -399,6 +401,25 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       }
     } catch(_) {}
+  }
+
+  async function handleInstallToHome(){
+    const ua = navigator.userAgent || '';
+    const isIOS = /iphone|ipad|ipod/i.test(ua);
+    const isAndroid = /android/i.test(ua);
+    if (deferredInstallPrompt) {
+      deferredInstallPrompt.prompt();
+      try { await deferredInstallPrompt.userChoice; } catch(e) {}
+      deferredInstallPrompt = null;
+      return;
+    }
+    if (isIOS) {
+      alert('iPhone/iPad：请用 Safari 打开 → 点分享按钮 → 选择“加入主画面”。');
+    } else if (isAndroid) {
+      alert('Android：请用 Chrome 打开 → 点右上角 ⋮ → 选择“加入主画面”或“安装应用”。');
+    } else {
+      alert('这个功能主要给手机使用。电脑可以用浏览器菜单选择“安装应用”或建立快捷方式。');
+    }
   }
 
   function forceRefreshPage(){
@@ -1109,7 +1130,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
 
-  function jsonpApi(params, timeoutMs=15000){
+  function jsonpApi(params, timeoutMs=9000){
     return new Promise((resolve, reject) => {
       const cb = 'cb_' + Date.now() + '_' + Math.random().toString(36).slice(2);
       const s = document.createElement('script');
@@ -1145,20 +1166,16 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   async function submitPayloadHybrid(payload){
-    // 1) fetch: fastest when browser allows it
+    // 成绩提交必须快：直接用 JSONP 确认 Apps Script 回应，不先跑慢速 fetch 多次重试。
     try {
-      const r = await apiFetch(payload, 2);
+      const r = await jsonpApi(payload, 9000);
       if (r && r.ok) return r;
-    } catch(e) {}
-
-    // 2) JSONP: avoids CORS, can confirm Apps Script response
-    try {
-      const r = await jsonpApi(payload, 15000);
-      if (r && r.ok) return r;
-    } catch(e) {}
-
-    // 3) hidden form POST: last fallback, cannot read response but usually writes
-    return await submitByHiddenForm({ ...payload, action:'submitScore' });
+      throw new Error((r && r.error) || 'submit failed');
+    } catch(e) {
+      // 兜底发送一次 form POST，但不把它当成确认成功。
+      try { await submitByHiddenForm({ ...payload, action:'submitScore' }); } catch(_) {}
+      throw e;
+    }
   }
 
   async function submitScore(durationSeconds){
@@ -1177,12 +1194,12 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     document.getElementById('submit-status').textContent = '正在提交成绩，请稍等...';
-    setLoading(true, '正在提交成绩，请不要关闭页面...');
+    setLoading(true, '正在提交成绩，通常几秒内完成...');
 
     try {
       const res = await submitPayloadHybrid(payload);
       if (res && res.ok) {
-        const extra = res.sheetName ? `（${res.sheetName} 第${res.row || '-'}行）` : (res.via === 'form' ? '（已发送）' : '');
+        const extra = res.sheetName ? `（${res.sheetName} 第${res.row || '-'}行）` : '';
         document.getElementById('submit-status').textContent = res.duplicate
           ? '✅ 成绩已提交（重复记录已自动忽略）'
           : '✅ 成绩已提交 ' + extra;
