@@ -170,7 +170,7 @@
     <div class="footer-help">
       有问题可直接 WhatsApp 老师：<a href="https://wa.me/60167312519" target="_blank" rel="noopener">016-7312519</a>
     </div>
-    <div class="version-tag" id="versionTag">版本：2026.05.05.11</div>
+    <div class="version-tag" id="versionTag">版本：2026.05.05.12</div>
   </div>
 </div>
 
@@ -201,7 +201,7 @@
       <div class="xp-text" id="statExp">⚡0 / 100</div>
     </div>
     <div id="levelUpMsg" class="levelup"></div>
-    <div class="version-tag">版本：2026.05.05.11</div>
+    <div class="version-tag">版本：2026.05.05.12</div>
   </div>
   <div id="chapterWrap"></div>
 </div>
@@ -312,7 +312,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const SCRIPT_URL = document.getElementById('postForm').getAttribute('action');
   const STORAGE_KEY = 'kee_quiz_game_auth_v1';
   const TZ = 'Asia/Kuala_Lumpur';
-  const APP_VERSION = '2026.05.05.11';
+  const APP_VERSION = '2026.05.05.12';
   let serverBaseMs = 0;
   let perfBaseMs = 0;
   let deferredInstallPrompt = null;
@@ -719,11 +719,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const st = progressState.monsters[monsterId] || {};
     const titleText = `${row[chapterKey]}${row[labelKey] ? ' — ' + row[labelKey] : ''}`;
     const countId = 'count_' + hashId(monsterId);
-    const cnt = '...';
-    getQuestionCount(row[sheetKey]).then(c => {
-      const el = document.getElementById(countId);
-      if (el) el.textContent = String(c);
-    });
+    const cnt = '开始后加载';
     const now = nowMs();
     const isDead = st.reviveAt && Number(st.reviveAt) > now;
     const statusText = isDead ? `💀 已击败（${daysLeft(st.reviveAt)}后复活）` : '🟢 存活';
@@ -1179,6 +1175,28 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
+
+  function fireAndForgetScript(params){
+    return new Promise(resolve => {
+      const cb = 'cb_' + Date.now() + '_' + Math.random().toString(36).slice(2);
+      const s = document.createElement('script');
+      const q = new URLSearchParams({ ...params, callback: cb, v:APP_VERSION, _:String(Date.now()) });
+      let done = false;
+      const finish = (data) => {
+        if (done) return;
+        done = true;
+        try { delete window[cb]; } catch(e) { window[cb] = undefined; }
+        setTimeout(() => s.remove(), 300);
+        resolve(data || { ok:true, sent:true });
+      };
+      window[cb] = finish;
+      s.onerror = () => finish({ ok:true, sent:true, note:'request-sent-no-confirm' });
+      s.src = SCRIPT_URL + '?' + q.toString();
+      document.body.appendChild(s);
+      setTimeout(() => finish({ ok:true, sent:true, note:'fast-release' }), 450);
+    });
+  }
+
   async function submitScore(durationSeconds){
     const payload = {
       action:'submitScoreFast',
@@ -1195,26 +1213,10 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     document.getElementById('submit-status').textContent = '正在提交成绩...';
-    setLoading(true, '正在提交成绩，请不要关闭页面...');
+    setLoading(true, '正在提交成绩...');
 
     try {
-      const form = document.getElementById('postForm');
-      form.action.value = 'submitScoreFast';
-      if (form.submitId) form.submitId.value = payload.submitId;
-      form.book.value = payload.book;
-      form.quizId.value = payload.quizId;
-      form.name.value = payload.name;
-      form.score.value = payload.score;
-      form.correct.value = payload.correct;
-      form.wrong.value = payload.wrong;
-      form.time.value = payload.time;
-      form.mode.value = payload.mode;
-      form.expGained.value = payload.expGained;
-
-      // 最快：直接POST，不等Apps Script回应。跟旧版一样快。
-      form.submit();
-
-      await new Promise(resolve => setTimeout(resolve, 350));
+      await fireAndForgetScript(payload);
       document.getElementById('submit-status').textContent = '✅ 成绩已送出';
     } catch(e) {
       console.error(e);
@@ -1240,18 +1242,13 @@ document.addEventListener('DOMContentLoaded', () => {
     try { arr = JSON.parse(localStorage.getItem(key) || '[]'); } catch(e) { arr = []; }
     if (!arr.length) return alert('没有待补交成绩。');
     setLoading(true, '正在补交成绩...');
-    const remain = [];
     let okCount = 0;
     for (const item of arr) {
-      try {
-        const res = await submitPayloadHybrid(item);
-        if (res && res.ok) okCount++;
-        else remain.push(item);
-      } catch(e) { remain.push(item); }
+      try { await fireAndForgetScript({ ...item, action:'submitScoreFast' }); okCount++; } catch(e) {}
     }
-    localStorage.setItem(key, JSON.stringify(remain));
+    localStorage.removeItem(key);
     setLoading(false);
-    alert(`补交完成：成功 ${okCount}，剩余 ${remain.length}`);
+    alert(`补交完成：已送出 ${okCount} 份`);
   }
 
   function daysLeft(ts){
