@@ -170,7 +170,7 @@
     <div class="footer-help">
       有问题可直接 WhatsApp 老师：<a href="https://wa.me/60167312519" target="_blank" rel="noopener">016-7312519</a>
     </div>
-    <div class="version-tag" id="versionTag">版本：2026.05.05.12</div>
+    <div class="version-tag" id="versionTag">版本：2026.05.19.1</div>
   </div>
 </div>
 
@@ -201,7 +201,7 @@
       <div class="xp-text" id="statExp">⚡0 / 100</div>
     </div>
     <div id="levelUpMsg" class="levelup"></div>
-    <div class="version-tag">版本：2026.05.05.12</div>
+    <div class="version-tag">版本：2026.05.19.1</div>
   </div>
   <div id="chapterWrap"></div>
 </div>
@@ -312,7 +312,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const SCRIPT_URL = document.getElementById('postForm').getAttribute('action');
   const STORAGE_KEY = 'kee_quiz_game_auth_v1';
   const TZ = 'Asia/Kuala_Lumpur';
-  const APP_VERSION = '2026.05.05.12';
+  const APP_VERSION = '2026.05.19.1';
   let serverBaseMs = 0;
   let perfBaseMs = 0;
   let deferredInstallPrompt = null;
@@ -719,7 +719,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const st = progressState.monsters[monsterId] || {};
     const titleText = `${row[chapterKey]}${row[labelKey] ? ' — ' + row[labelKey] : ''}`;
     const countId = 'count_' + hashId(monsterId);
-    const cnt = '开始后加载';
+    const cnt = '...';
+    getQuestionCount(row[sheetKey]).then(c => {
+      const el = document.getElementById(countId);
+      if (el) el.textContent = String(c);
+    });
     const now = nowMs();
     const isDead = st.reviveAt && Number(st.reviveAt) > now;
     const statusText = isDead ? `💀 已击败（${daysLeft(st.reviveAt)}后复活）` : '🟢 存活';
@@ -1074,7 +1078,7 @@ document.addEventListener('DOMContentLoaded', () => {
         battleMsg = battleEndedByDeath
           ? `💀 挑战失败！你被小怪击败了，建议先做普通练习。`
           : (kill
-            ? (perfect ? `💀 Perfect Kill！小怪已死亡，30天后复活。` : `💀 小怪已击败，进入复活倒数。`)
+            ? (perfect ? `💀 Perfect Kill！小怪已死亡，7天后复活。` : `💀 小怪已击败，进入复活倒数。`)
             : `⚠️ 挑战失败！未达到击杀门槛（需要 ≥70%），小怪仍存活。`);
       }
     } else if (currentMode === 'boss') {
@@ -1176,30 +1180,26 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
 
-  function fireAndForgetScript(params){
-    return new Promise(resolve => {
-      const cb = 'cb_' + Date.now() + '_' + Math.random().toString(36).slice(2);
-      const s = document.createElement('script');
-      const q = new URLSearchParams({ ...params, callback: cb, v:APP_VERSION, _:String(Date.now()) });
-      let done = false;
-      const finish = (data) => {
-        if (done) return;
-        done = true;
-        try { delete window[cb]; } catch(e) { window[cb] = undefined; }
-        setTimeout(() => s.remove(), 300);
-        resolve(data || { ok:true, sent:true });
-      };
-      window[cb] = finish;
-      s.onerror = () => finish({ ok:true, sent:true, note:'request-sent-no-confirm' });
-      s.src = SCRIPT_URL + '?' + q.toString();
-      document.body.appendChild(s);
-      setTimeout(() => finish({ ok:true, sent:true, note:'fast-release' }), 450);
-    });
+  function submitQueueBeacon(params){
+    try {
+      const q = new URLSearchParams({ ...params, action:'submitToQueue', v:APP_VERSION, _:String(Date.now()) });
+      const img = new Image();
+      img.referrerPolicy = 'no-referrer';
+      img.src = SCRIPT_URL + '?' + q.toString();
+      window.__scoreBeacons = window.__scoreBeacons || [];
+      window.__scoreBeacons.push(img);
+      setTimeout(() => {
+        try { window.__scoreBeacons = (window.__scoreBeacons || []).slice(-20); } catch(e) {}
+      }, 5000);
+      return true;
+    } catch(e) {
+      return false;
+    }
   }
 
   async function submitScore(durationSeconds){
     const payload = {
-      action:'submitScoreFast',
+      action:'submitToQueue',
       submitId: `${book}|${displayUser || user}|${currentMode === 'boss' ? `Bab ${currentBab} Boss` : currentRow[chapterKey]}|${Date.now()}`,
       book,
       quizId: currentMode === 'boss' ? `Bab ${currentBab} Boss` : currentRow[chapterKey],
@@ -1212,16 +1212,19 @@ document.addEventListener('DOMContentLoaded', () => {
       expGained: currentExpGain
     };
 
-    document.getElementById('submit-status').textContent = '正在提交成绩...';
-    setLoading(true, '正在提交成绩...');
+    document.getElementById('submit-status').textContent = '正在送出成绩...';
+    setLoading(true, '正在送出成绩...');
 
     try {
-      await fireAndForgetScript(payload);
-      document.getElementById('submit-status').textContent = '✅ 成绩已送出';
+      const sent = submitQueueBeacon(payload);
+      if (!sent) throw new Error('send failed');
+
+      await new Promise(resolve => setTimeout(resolve, 150));
+      document.getElementById('submit-status').textContent = '✅ 成绩已送出（稍后自动分类）';
     } catch(e) {
       console.error(e);
       savePendingScore(payload);
-      document.getElementById('submit-status').innerHTML = '⚠️ 成绩提交失败，已暂存在本机。请点“补交成绩”或截图给老师。 <button class="btn small secondary" onclick="window.retryPendingScores && window.retryPendingScores()">补交成绩</button>';
+      document.getElementById('submit-status').innerHTML = '⚠️ 成绩暂存在本机。请点“补交成绩”或截图给老师。 <button class="btn small secondary" onclick="window.retryPendingScores && window.retryPendingScores()">补交成绩</button>';
     } finally {
       setLoading(false);
     }
@@ -1244,9 +1247,12 @@ document.addEventListener('DOMContentLoaded', () => {
     setLoading(true, '正在补交成绩...');
     let okCount = 0;
     for (const item of arr) {
-      try { await fireAndForgetScript({ ...item, action:'submitScoreFast' }); okCount++; } catch(e) {}
+      try {
+        if (submitQueueBeacon({ ...item, action:'submitToQueue' })) okCount++;
+      } catch(e) {}
     }
     localStorage.removeItem(key);
+    await new Promise(resolve => setTimeout(resolve, 200));
     setLoading(false);
     alert(`补交完成：已送出 ${okCount} 份`);
   }
