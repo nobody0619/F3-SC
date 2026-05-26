@@ -1,0 +1,10 @@
+﻿title,type,question,A,B,C,D,E,F,G,H,I,J,answer,image
+3-pin Plugs and 2-pin Plugs and Fuse,radio,Earth wire / Dawai bumi 什么颜色？,Yellow and green stripes / Belang kuning dan hijau,Blue / Biru,Brown / Perang,,,,,,,,A,
+,radio,Neutral wire / Dawai neutral 什么颜色？,Yellow and green stripes / Belang kuning dan hijau,Blue / Biru,Brown / Perang,,,,,,,,B,
+,radio,Live wire / Dawai hidup 什么颜色？,Yellow and green stripes / Belang kuning dan hijau,Blue / Biru,Brown / Perang,,,,,,,,C,
+,radio,Fuse / Fius 是什么？,"a fine and short wire that heats up easily and melts when the current flowing through it exceeds the value of the fuse / seutas wayar halus yang pendek, mudah menjadi panas dan melebur apabila arus yang mengalir melaluinya lebih besar daripada nilai fius tersebut",a switch that turns off automatically when current flows / suis yang tertutup secara automatik apabila arus mengalir,a device that stores electrical energy in a circuit / peranti yang menyimpan tenaga elektrik dalam satu litar,,,,,,,,A,
+,text,电流 11.23A 的热水壶应该装多少A的 fuse / fius ?,,,,,,,,,,,"13,13A",
+,text,电流 5A 的电器应该装多少A的 fuse / fius ?,,,,,,,,,,,"10,10A",
+,checkbox,Fuse / Fius 有什么规格？,1A,2A,3A,4A,5A,6A,7A,8A,9A,10A,"A,B,C,E,J",
+,checkbox,Fuse / Fius 有什么规格？,11A,12A,13A,14A,15A,20A,25A,30A,,,"C,E,H",
+,radio,Ampere 怎么算？,W/V,V/W,WxV,,,,,,,,A,

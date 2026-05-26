@@ -1,0 +1,33 @@
+﻿title,type,question,A,B,C,D,E,F,G,H,answer,image
+Electricity Supply and Wiring System in Homes,radio,Live wire / Dawai hidup 的电压是,0V,240V,110V,220V,,,,,B,
+,radio,Neutral wire / Dawai neutral 的电压是,0V,240V,110V,220V,,,,,A,
+,radio,Main Fuse box / Kotak fius utama 里的 Main fuse / Fius utama 有什么用？,"Automatically disconnect the circuit of the current exceeds a safe level
+Memutuskan litar secara automatik jika arus melebihi suatu paras yang selamat","Measure the electrical energy used
+Mengukur tenaga elektrik yang digunakan","Controls the total current flowing through the circuit in the house
+Mengawal jumlah arus yang mengalir melalui litar di dalam rumah","Bring the electric current from the substation to the house
+Membawa arus elektrik dari pencawang ke rumah","Allow a leaky current to flow to the Earth
+Membenarkan aus bocor mengalir ke bumi",,,,A,
+,radio,Electric meter / Meter elektrik 有什么用？,"Automatically disconnect the circuit of the current exceeds a safe level
+Memutuskan litar secara automatik jika arus melebihi suatu paras yang selamat","Measure the electrical energy used
+Mengukur tenaga elektrik yang digunakan","Controls the total current flowing through the circuit in the house
+Mengawal jumlah arus yang mengalir melalui litar di dalam rumah","Bring the electric current from the substation to the house
+Membawa arus elektrik dari pencawang ke rumah","Allow a leaky current to flow to the Earth
+Membenarkan aus bocor mengalir ke bumi",,,,B,
+,radio,Main switch / Suis utama 有什么用？,"Automatically disconnect the circuit of the current exceeds a safe level
+Memutuskan litar secara automatik jika arus melebihi suatu paras yang selamat","Measure the electrical energy used
+Mengukur tenaga elektrik yang digunakan","Controls the total current flowing through the circuit in the house
+Mengawal jumlah arus yang mengalir melalui litar di dalam rumah","Bring the electric current from the substation to the house
+Membawa arus elektrik dari pencawang ke rumah","Allow a leaky current to flow to the Earth
+Membenarkan aus bocor mengalir ke bumi",,,,C,
+,radio,Live ware / Dawai hidup 有什么用？,"Automatically disconnect the circuit of the current exceeds a safe level
+Memutuskan litar secara automatik jika arus melebihi suatu paras yang selamat","Measure the electrical energy used
+Mengukur tenaga elektrik yang digunakan","Controls the total current flowing through the circuit in the house
+Mengawal jumlah arus yang mengalir melalui litar di dalam rumah","Bring the electric current from the substation to the house
+Membawa arus elektrik dari pencawang ke rumah","Allow a leaky current to flow to the Earth
+Membenarkan aus bocor mengalir ke bumi",,,,D,
+,radio,Earth wire / Dawai bumi 有什么用？,"Automatically disconnect the circuit of the current exceeds a safe level
+Memutuskan litar secara automatik jika arus melebihi suatu paras yang selamat","Measure the electrical energy used
+Mengukur tenaga elektrik yang digunakan","Controls the total current flowing through the circuit in the house
+Mengawal jumlah arus yang mengalir melalui litar di dalam rumah","Bring the electric current from the substation to the house
+Membawa arus elektrik dari pencawang ke rumah","Allow a leaky current to flow to the Earth
+Membenarkan aus bocor mengalir ke bumi",,,,E,
