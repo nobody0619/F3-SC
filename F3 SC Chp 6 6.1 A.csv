@@ -1,40 +1,40 @@
-﻿title,type,question,A,B,C,D,E,F,G,H,I,J,K,,,answer,image
+﻿title,type,question,A,B,C,D,E,F,G,H,I,answer,image
 Generation of Electricity,checkbox,"Renewable Energy Source /
-Sumber Tenaga Boleh Diperbaharui",Can be replaced continually / Boleh digantikan secara berterusan,Will never deplete / Tidak akan habis,Cannot be replaced / Tidak boleh diganti,Will deplete / Akan habis digunakan,,,,,,,,,,"A,B",
+Sumber Tenaga Boleh Diperbaharui",Can be replaced continually / Boleh digantikan secara berterusan,Will never deplete / Tidak akan habis,Cannot be replaced / Tidak boleh diganti,Will deplete / Akan habis digunakan,,,,,,"A,B",
 ,checkbox,"Non-Renewable Energy Source /
-Sumber Tenaga Tidak Boleh Diperbaharui",Can be replaced continually / Boleh digantikan secara berterusan,Will never deplete / Tidak akan habis,Cannot be replaced / Tidak boleh diganti,Will deplete / Akan habis digunakan,,,,,,,,,,"C,D",
+Sumber Tenaga Tidak Boleh Diperbaharui",Can be replaced continually / Boleh digantikan secara berterusan,Will never deplete / Tidak akan habis,Cannot be replaced / Tidak boleh diganti,Will deplete / Akan habis digunakan,,,,,,"C,D",
 ,radio,"cut the magnetic field lines will produce / 
-memotong garis medan magnet akan menghasilkan ",Alternating current / Arus ulang-alik,Direct current / Arus terus,Induced current / Arus aruhan,,,,,,,,,,,C,
+memotong garis medan magnet akan menghasilkan ",Alternating current / Arus ulang-alik,Direct current / Arus terus,Induced current / Arus aruhan,,,,,,,C,
 ,radio,Hydro energy / Tenaga hidro,"Non-Renewable Energy Source /
 Sumber Tenaga Tidak Boleh Diperbaharui","Renewable Energy Source /
-Sumber Tenaga Boleh Diperbaharui",,,,,,,,,,,,B,
+Sumber Tenaga Boleh Diperbaharui",,,,,,,,B,
 ,radio,Wave energy / Tenaga ombak,"Non-Renewable Energy Source /
 Sumber Tenaga Tidak Boleh Diperbaharui","Renewable Energy Source /
-Sumber Tenaga Boleh Diperbaharui",,,,,,,,,,,,B,
+Sumber Tenaga Boleh Diperbaharui",,,,,,,,B,
 ,radio,Solar energy / Tenaga solar,"Non-Renewable Energy Source /
 Sumber Tenaga Tidak Boleh Diperbaharui","Renewable Energy Source /
-Sumber Tenaga Boleh Diperbaharui",,,,,,,,,,,,B,
+Sumber Tenaga Boleh Diperbaharui",,,,,,,,B,
 ,radio,Tidal energy / Tenaga pasang surut,"Non-Renewable Energy Source /
 Sumber Tenaga Tidak Boleh Diperbaharui","Renewable Energy Source /
-Sumber Tenaga Boleh Diperbaharui",,,,,,,,,,,,B,
+Sumber Tenaga Boleh Diperbaharui",,,,,,,,B,
 ,radio,Wind energy / Tenaga angin,"Non-Renewable Energy Source /
 Sumber Tenaga Tidak Boleh Diperbaharui","Renewable Energy Source /
-Sumber Tenaga Boleh Diperbaharui",,,,,,,,,,,,B,
+Sumber Tenaga Boleh Diperbaharui",,,,,,,,B,
 ,radio,Biomass energy / Tenaga biojisim,"Non-Renewable Energy Source /
 Sumber Tenaga Tidak Boleh Diperbaharui","Renewable Energy Source /
-Sumber Tenaga Boleh Diperbaharui",,,,,,,,,,,,B,
+Sumber Tenaga Boleh Diperbaharui",,,,,,,,B,
 ,radio,Geothermal energy / Tenaga geoterma,"Non-Renewable Energy Source /
 Sumber Tenaga Tidak Boleh Diperbaharui","Renewable Energy Source /
-Sumber Tenaga Boleh Diperbaharui",,,,,,,,,,,,B,
+Sumber Tenaga Boleh Diperbaharui",,,,,,,,B,
 ,radio,Nuclear energy / Tenaga nuklear,"Non-Renewable Energy Source /
 Sumber Tenaga Tidak Boleh Diperbaharui","Renewable Energy Source /
-Sumber Tenaga Boleh Diperbaharui",,,,,,,,,,,,A,
+Sumber Tenaga Boleh Diperbaharui",,,,,,,,A,
 ,radio,Coal / Arang batu,"Non-Renewable Energy Source /
 Sumber Tenaga Tidak Boleh Diperbaharui","Renewable Energy Source /
-Sumber Tenaga Boleh Diperbaharui",,,,,,,,,,,,A,
+Sumber Tenaga Boleh Diperbaharui",,,,,,,,A,
 ,radio,Natural gas / Gas asli,"Non-Renewable Energy Source /
 Sumber Tenaga Tidak Boleh Diperbaharui","Renewable Energy Source /
-Sumber Tenaga Boleh Diperbaharui",,,,,,,,,,,,A,
+Sumber Tenaga Boleh Diperbaharui",,,,,,,,A,
 ,radio,Petroleum,"Non-Renewable Energy Source /
 Sumber Tenaga Tidak Boleh Diperbaharui","Renewable Energy Source /
-Sumber Tenaga Boleh Diperbaharui",,,,,,,,,,,,A,
+Sumber Tenaga Boleh Diperbaharui",,,,,,,,A,
