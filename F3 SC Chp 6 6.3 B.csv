@@ -6,7 +6,7 @@ Memutuskan litar secara automatik jika arus melebihi suatu paras yang selamat","
 Mengukur tenaga elektrik yang digunakan","Controls the total current flowing through the circuit in the house
 Mengawal jumlah arus yang mengalir melalui litar di dalam rumah","Bring the electric current from the substation to the house
 Membawa arus elektrik dari pencawang ke rumah","Allow a leaky current to flow to the Earth
-Membenarkan aus bocor mengalir ke bumi",,,,A,
+Membenarkan arus bocor mengalir ke bumi",,,,A,
 ,radio,Electric meter / Meter elektrik 有什么用？,"Automatically disconnect the circuit of the current exceeds a safe level
 Memutuskan litar secara automatik jika arus melebihi suatu paras yang selamat","Measure the electrical energy used
 Mengukur tenaga elektrik yang digunakan","Controls the total current flowing through the circuit in the house
