@@ -183,7 +183,7 @@
     <div class="footer-help">
       有问题可直接 WhatsApp 老师：<a href="https://wa.me/60167312519" target="_blank" rel="noopener">016-7312519</a>
     </div>
-    <div class="version-tag" id="versionTag">版本：2026.06.19.4</div>
+    <div class="version-tag" id="versionTag">版本：2026.06.19.5</div>
   </div>
 </div>
 
@@ -226,7 +226,7 @@
       <div class="xp-text" id="statExp">⚡0 / 100</div>
     </div>
     <div id="levelUpMsg" class="levelup"></div>
-    <div class="version-tag">版本：2026.06.19.4</div>
+    <div class="version-tag">版本：2026.06.19.5</div>
   </div>
   <div id="chapterWrap"></div>
 </div>
@@ -337,7 +337,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const SCRIPT_URL = document.getElementById('postForm').getAttribute('action');
   const STORAGE_KEY = 'kee_quiz_game_auth_v1';
   const TZ = 'Asia/Kuala_Lumpur';
-  const APP_VERSION = '2026.06.19.4';
+  const APP_VERSION = '2026.06.19.5';
   const SKIP_SERVER_LOGIN = true; // 紧急稳定模式：登入不等待 Apps Script，避免学生卡在登入
   const QUESTION_CACHE_PREFIX = 'kee_question_cache_v1_';
   const QUESTION_CACHE_DAYS = 30;
@@ -892,7 +892,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
   function buildWrongId(row, q){
-    return [book, row[chapterKey]||'', row[labelKey]||'', row[sheetKey]||'', q.question||''].join('||');
+    // 更稳定唯一：科目 + 章节 + label + sheet + question + answer + image
+    // 避免不同题目写到同一个 wrongId，导致 WrongBook 同一行内容一直被换掉。
+    const raw = [
+      book,
+      row ? (row[chapterKey] || '') : '',
+      row ? (row[labelKey] || '') : '',
+      row ? (row[sheetKey] || '') : '',
+      q ? (q.question || '') : '',
+      q ? (q.answer || '') : '',
+      q ? (q.image || '') : ''
+    ].join('|');
+    return 'WB_' + hashId(raw);
   }
 
   function fireWrongBook(action, wrongId, row, q){
@@ -1795,25 +1806,33 @@ document.addEventListener('DOMContentLoaded', () => {
   function submitByHiddenForm(payload){
     return new Promise(resolve => {
       const form = document.getElementById('postForm');
-      form.action.value = payload.action || 'submitToQueue';
-      form.submitId.value = payload.submitId || '';
-      form.book.value    = payload.book || '';
-      form.quizId.value  = payload.quizId || '';
-      form.name.value    = payload.name || '';
-      form.score.value   = payload.score || 0;
-      form.correct.value = payload.correct || 0;
-      form.wrong.value   = payload.wrong || 0;
-      if (form.rawCorrect) form.rawCorrect.value = payload.rawCorrect || 0;
-      if (form.rawWrong) form.rawWrong.value = payload.rawWrong || 0;
-      if (form.accuracyPct) form.accuracyPct.value = payload.accuracyPct || 0;
-      form.time.value    = payload.time || 0;
-      form.mode.value    = payload.mode || '';
-      form.expGained.value = payload.expGained || 0;
-      if (form.coinBase) form.coinBase.value = payload.coinBase || 0;
-      if (form.coinPenalty) form.coinPenalty.value = payload.coinPenalty || 0;
-      if (form.coinBonus) form.coinBonus.value = payload.coinBonus || 0;
-      if (form.coinFinal) form.coinFinal.value = payload.coinFinal || 0;
-      if (form.coinNote) form.coinNote.value = payload.coinNote || '';
+      form.setAttribute('action', SCRIPT_URL);
+
+      const set = (name, value) => {
+        const el = form.elements[name];
+        if (el) el.value = value == null ? '' : String(value);
+      };
+
+      set('action', payload.action || 'submitToQueue');
+      set('submitId', payload.submitId || '');
+      set('book', payload.book || '');
+      set('quizId', payload.quizId || '');
+      set('name', payload.name || '');
+      set('score', payload.score || 0);
+      set('correct', payload.correct || 0);
+      set('wrong', payload.wrong || 0);
+      set('rawCorrect', payload.rawCorrect || 0);
+      set('rawWrong', payload.rawWrong || 0);
+      set('accuracyPct', payload.accuracyPct || 0);
+      set('time', payload.time || 0);
+      set('mode', payload.mode || '');
+      set('expGained', payload.expGained || 0);
+      set('coinBase', payload.coinBase || 0);
+      set('coinPenalty', payload.coinPenalty || 0);
+      set('coinBonus', payload.coinBonus || 0);
+      set('coinFinal', payload.coinFinal || 0);
+      set('coinNote', payload.coinNote || '');
+
       try { form.submit(); } catch(e) {}
       setTimeout(() => resolve({ ok:true, via:'form' }), 1200);
     });
